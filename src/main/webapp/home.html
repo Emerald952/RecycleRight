@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>RecycleRight</title>
+</head>
+<body>
+	<header>
+		<div id="topBar">
+			<button>Sign Up</button>
+		</div>
+
+		
+		<h1>Recycle Right</h1>
+		<h3>Know Where Your Waste Belongs</h3>
+	</header>
+	
+	<main>
+		<form action="searchWaste" method="get">
+			<input type="text" name="waste" placeholde="Enter Waste Item...">
+			<button type="submit">Search</button>
+		</form>
+	
+		<div id="categories">
+			<a href="category?type=wet">
+				<h2>Wet Waste</h2>
+			</a>
+			<a href="category?type=dry">
+				<h2>Dry Waste</h2>
+			</a>
+			<a href="category?type=ewaste">
+				<h2>E-Waste</h2>
+			</a>
+			<a href="category?type=hazardous">
+				<h2>Hazardous Waste</h2>
+			</a>
+		</div>
+	</main>
+	
+	<footer>
+		<a href="recycleInfo">Recycling Number</a>
+		<a href="disposeGuide">Guide to Dispose</a>
+		<a href="disposalPoint">Disposal Points</a>
+	
+	</footer>
+	
+	
+</body>
+</html>
