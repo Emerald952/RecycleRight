@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>RecycleRight</title>
+	<meta charset="UTF-8">
+	<title>RecycleRight</title>
+	<link href="style.css" rel="stylesheet">
 </head>
 <body>
 	<header>
-		<div id="topBar">
+		<nav>
 			<button>Sign Up</button>
+		</nav>
+		
+		<div id = "heading">
+			<h1>Recycle Right</h1>
+			<h3>Know Where Your Waste Belongs</h3>
 		</div>
 
-		
-		<h1>Recycle Right</h1>
-		<h3>Know Where Your Waste Belongs</h3>
 	</header>
 	
 	<main>
-		<form action="searchWaste" method="get">
+		<form action="searchWaste" method="get" id="searchBox">
 			<input type="text" name="waste" placeholde="Enter Waste Item...">
 			<button type="submit">Search</button>
 		</form>
 	
 		<div id="categories">
-			<a href="category?type=wet">
+			<a href="category?type=wet" class="catCard">
 				<h2>Wet Waste</h2>
 			</a>
-			<a href="category?type=dry">
+			<a href="category?type=dry" class="catCard">
 				<h2>Dry Waste</h2>
 			</a>
-			<a href="category?type=ewaste">
+			<a href="category?type=ewaste" class="catCard">
 				<h2>E-Waste</h2>
 			</a>
-			<a href="category?type=hazardous">
+			<a href="category?type=hazardous" class="catCard">
 				<h2>Hazardous Waste</h2>
 			</a>
 		</div>

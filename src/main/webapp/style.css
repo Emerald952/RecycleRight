@@ -1,1 +1,61 @@
 @charset "UTF-8";
+#heading{
+	text-align: center;
+    padding: 10px;
+}
+main, footer{
+    margin: 40px auto;
+    padding: 30px;
+    max-width: 700px;
+   
+}
+nav{
+	position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+#searchBox{
+	display:flex;
+	justify-content: center;
+	align-items: end;
+}
+
+#categories{
+	display: flex;
+	gap: 50px;
+	justify-content: center;
+	align-items: center;
+	margin-top: 40px;
+	flex-wrap: wrap;
+}
+
+.catCard{
+	height: 250px;
+	width: 250px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	border: solid 1px black;
+}
+
+footer{
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+form input {
+    width: 250px;
+    padding: 8px;
+}
+
+form button {
+    padding: 8px 12px;
+}
