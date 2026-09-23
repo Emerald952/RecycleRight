@@ -48,8 +48,8 @@ public class UserDAO{
 		}
 	}
 	
-	public String validateUser(String email, String password) {
-		String sql = "SELECT username, password FROM users WHERE email = ?";
+	public String[] validateUser(String email, String password) {
+		String sql = "SELECT username, password, role FROM users WHERE email = ?";
 		try(Connection conn = DBConnection.getConnection()){
 				PreparedStatement pstmt = conn.prepareStatement(sql);
 
@@ -60,9 +60,10 @@ public class UserDAO{
 				if(rs.next()) {
 					String dbHash = rs.getString("password");
 					String dbName = rs.getString("username");
+					String dbRole = rs.getString("role");
 					
 					if(BCrypt.checkpw(password, dbHash)){
-						return dbName;
+						return new String[]{dbName, dbRole};
 					}
 					
 				}

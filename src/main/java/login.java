@@ -22,12 +22,13 @@ public class login extends HttpServlet {
 		String pwd = request.getParameter("password");
 		
 		UserDAO userDao = new UserDAO();
-		String username = userDao.validateUser(email, pwd);
+		String[] result = userDao.validateUser(email, pwd);
 		
-		if(username != null) {
+		if(result != null) {
 			HttpSession session = request.getSession();
 			
-			session.setAttribute("user", username);
+			session.setAttribute("user", result[0]);
+			session.setAttribute("role", result[1]);
 			response.sendRedirect("home.jsp");
 		}else {
 			response.sendRedirect("home.jsp?LoginError=true");

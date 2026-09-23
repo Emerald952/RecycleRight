@@ -17,7 +17,14 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Search Result</title>
+	<title>
+		Recycle Right:
+		<%=
+			request.getAttribute("resultsHeading") != null
+			? request.getAttribute("resultsHeading")
+			: "Search Result"
+		%>
+	</title>
 	<link href="css/home.css" rel="stylesheet">
 	<link href="css/result.css" rel="stylesheet">
 	<script src="js/card.js" defer></script>
@@ -34,7 +41,7 @@
 					<div class="card" onclick="toggleDetails(this)">
 						<div class="card-header">
 							<h2>
-								<%=currCat%>:
+								<%=currCat%>
 								<span class="arrow">▼</span>
 							</h2>
 							
@@ -70,7 +77,10 @@
 		} else{%>
 			<p class="not-found">No items found for this selection</p>
 		<%}%>
-		<a href="home.jsp">⬅ Back to Home</a>
+	</div>
+	
+	<div class="back">
+		<a href="home.jsp" class="back-link">⬅ Back to Home</a>
 	</div>
 
 </body>
